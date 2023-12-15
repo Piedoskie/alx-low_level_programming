@@ -1,28 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * main - Entry point
+ * main - A program that prints combination of all two digit numbers.
  *
- * Return: Always 0 (Succes)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int n;
-	int i;
 
-	for (n = 0 ; n < 9 ; n++)
+	int num = 0;
+	int tens;
+	int ones;
+
+	while (num <= 99)
 	{
-		i = n + 1;
-		do {
-			putchar('0' + n);
-			putchar('0' + i);
-			if (n < 8)
+		tens = num % 10;
+		ones = num / 10;
+
+		if (ones < tens)
+		{
+			putchar(ones + '0');
+			putchar(tens + '0');
+			if (num < 89)
 			{
 				putchar(',');
-				putchar(32);
+				putchar(' ');
 			}
-			i++;
-		} while (i < 10);
+		}
+		num++;
 	}
 	putchar('\n');
+
 	return (0);
 }
