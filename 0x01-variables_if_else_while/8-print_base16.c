@@ -1,8 +1,7 @@
 /*
  * File: 8-print_base16.c
- * Auth: Piet Malefo 
+ * Auth: Piet Malefo
  */
-
 #include <stdio.h>
 
 /**
